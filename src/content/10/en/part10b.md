@@ -520,7 +520,7 @@ Routing in a React Native application is a bit different to routing in a web app
 With React Native we can use the entire React router's core, including the hooks and components. The only difference to the browser environment is that we must replace the <em>BrowserRouter</em> with React Native compatible [NativeRouter](https://reactrouter.com/docs/en/v6/api#nativerouter), provided by the [react-router-native](https://www.npmjs.com/package/react-router-native) library. Let's get started by installing the <i>react-router-native</i> library:
 
 ```shell
-npm install react-router-native
+npm install react-router-native@5.2.1
 ```
 
 Next, open the <i>App.js</i> file and add the <em>NativeRouter</em> component to the <em>App</em> component:
@@ -570,10 +570,7 @@ const Main = () => {
     <View style={styles.container}>
       <AppBar />
       // highlight-start
-      <Routes>
         <Route path="/" element={<RepositoryList />} exact />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
       // highlight-end
     </View>
   );
